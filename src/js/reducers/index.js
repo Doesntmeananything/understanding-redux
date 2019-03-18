@@ -7,7 +7,7 @@ const initialState = {
 function rootReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_ARTICLE:
-      return [...state, action.payload];
+      return { articles: [...state.articles, action.payload] };
 
     default:
       return state;
